@@ -1,14 +1,15 @@
+import './Header.css';
+
 const Header = () => {
     return (
         <div className="header">
             <div className="header_logo">
                 <img src={require("../assets/logo.png")} alt="logo" />
             </div>
-            <div >
+            <div className="header_form">
                 <h1>The Weather In My City</h1>
                 <form>
-                    <label >Enter you city name here...</label>
-                    <input type="text"/>
+                    <input type="text" placeholder="Enter you city name here..." />
                     <button type="submit">Search</button>
                 </form>
             </div>
