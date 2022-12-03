@@ -1,6 +1,6 @@
 import './Header.css';
 
-const Header = () => {
+const Header = (props) => {
     return (
         <div className="header">
             <div className="header_logo">
@@ -8,8 +8,8 @@ const Header = () => {
             </div>
             <div className="header_form">
                 <h1>The Weather In My City</h1>
-                <form>
-                    <input type="text" placeholder="Enter you city name here..." />
+                <form onSubmit={props.onSubmit}>
+                    <input type="text" placeholder="Enter you city name here..." value={props.input} onChange={props.onChange}/>
                     <button type="submit">Search</button>
                 </form>
             </div>
