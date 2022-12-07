@@ -1,0 +1,31 @@
+.title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 0px;
+}
+
+.title h1 {
+    color: var(--bg-color);
+    font-size: 50px;
+}
+
+
+/* Responsive design */
+
+
+/* Mobile devices */
+
+@media screen and (max-width: 480px) {
+    .title h1 {
+        font-size: 20px;   
+    }
+}
+
+/* iPads, Tablets */
+
+@media (min-width:481px) and (max-width: 1360px) {
+    .title h1 {
+        font-size: 30px;
+    }
+}
