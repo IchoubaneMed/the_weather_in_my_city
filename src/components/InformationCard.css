@@ -37,3 +37,8 @@
     top: 0px;
 }
 
+.weather_icon {
+    width: 80px;
+    height: 80px;
+}
+
