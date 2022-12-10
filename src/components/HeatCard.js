@@ -1,17 +1,20 @@
 import "./HeatCard.css";
-import {CiTempHigh} from 'react-icons/ci';
+import {RiTempColdFill} from 'react-icons/ri';
 
-const HeatCard = () => {
+const HeatCard = (props) => {
+    const celsius = (props.temp - 273.15).toFixed(1);
+    const fahrenheit = ((props.temp - 273.15) * 9/5 + 32).toFixed(1);
     return (
         <div className="card">
             <div className="card_content">
-                <h1>24 °C</h1>
+                <h1>{celsius} °C</h1>
                 <hr />
-                <h1>76 °F</h1>
+                <h1>{fahrenheit} °F</h1>
             </div>
-            <CiTempHigh className="CiTempHigh"/>
+            <RiTempColdFill className="CiTempHigh"/>
         </div>
     );
 }
+
 
 export default HeatCard;
