@@ -1,27 +1,40 @@
-import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet'
+import { MapContainer, TileLayer, Marker, useMap } from 'react-leaflet'
 import "./Map.css";
-import {ImMap} from 'react-icons/im';
+import { ImMap } from 'react-icons/im';
 
 
-const Map = () => {
+const Map = ({ lon, lat }) => {
+    const position = [lat, lon]
+
+
     return (
         <div className="map_container">
-            <MapContainer center={[51.505, -0.09]} zoom={13} scrollWheelZoom={false}>
+            {/* Expect for its children, MapContainer props are immutable:
+            changing them after they have set a first time will have no effect
+            on the Map instance or its container */}
+            <MapContainer center={position} zoom={10} scrollWheelZoom={true}>
                 <TileLayer
                     attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
                     url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
                 />
-                <Marker position={[51.505, -0.09]}>
-                    <Popup>
-                        A pretty CSS3 popup. <br /> Easily customizable.
-                    </Popup>
+                {/* Use it like this */}
+                <ChangeMapView coords={position} />
+                <Marker position={position}>
                 </Marker>
             </MapContainer>
 
-            <ImMap className="map_icon"/>
+            <ImMap className="map_icon" />
         </div>
 
     );
+}
+
+// a child component that will change the map view upon position change
+function ChangeMapView({ coords }) {
+    const map = useMap();
+    map.setView(coords, map.getZoom());
+
+    return null;
 }
 
 export default Map;
