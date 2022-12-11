@@ -11,3 +11,11 @@
     gap: 50px;
     margin: 20px 0;
 }
+
+.container_2 {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 50px;
+    margin: 20px 0;
+}
