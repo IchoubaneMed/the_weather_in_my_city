@@ -58,8 +58,8 @@ const customStyles = {
     option: (provided, state) => ({
         ...provided,
         borderBottom: '2px dotted #ccccccff',
-        color: state.isSelected ? '#1a1a1aff' : '#ccccccff',
-        backgroundColor: state.isSelected ? '#ffcc00ff' : '#1a1a1aff',
+        color: state.isSelected ? '#1a1a1aff' : state.isFocused ? '#1a1a1aff' : '#ccccccff',
+        backgroundColor: state.isSelected ? '#ffcc00ff' : state.isFocused ? '#ffcc00ff' : '#1a1a1aff',
     })
 }
 
