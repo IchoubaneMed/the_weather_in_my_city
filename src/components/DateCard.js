@@ -1,16 +1,16 @@
 import "./DateCard.css";
-import {BsFillCalendarWeekFill} from 'react-icons/bs';
+import {MdOutlineAccessTimeFilled} from 'react-icons/md';
 
 
-const DateCard = () => {
+const DateCard = ({date, time_12}) => {
+
     return(
         <div className="date_card">
             <div className="card_content">
-                <p>
-                    Monday, 28th Nov 22 3:07 am
-                </p>
+                <h1>{date}</h1>
+                <h1>{time_12}</h1>
             </div>
-            <BsFillCalendarWeekFill className="date_icon"/>
+            <MdOutlineAccessTimeFilled className="date_icon"/>
         </div>
     );
 }

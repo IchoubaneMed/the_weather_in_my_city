@@ -12,16 +12,19 @@
     -moz-box-shadow: 0px 0px 11px 5px var(--primary-color);
 }
 
-.date_card > .card_content p {
+.date_card > .card_content h1 {
     color: var(--secondary-color);
     font-size: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .date_icon {
     color: var(--primary-color);
     font-size: 50px;
     position: absolute;
-    right: 10px;
-    top: 5px;
+    right: 5px;
+    top: 0px;
 }
 
