@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/the_weather_in_my_city/static/css/main.58c6fe04.css",
+    "main.js": "/the_weather_in_my_city/static/js/main.d41a3836.js",
+    "static/media/logo.png": "/the_weather_in_my_city/static/media/logo.dc12253d9bbbfd1eb5d9.png",
+    "index.html": "/the_weather_in_my_city/index.html",
+    "main.58c6fe04.css.map": "/the_weather_in_my_city/static/css/main.58c6fe04.css.map",
+    "main.d41a3836.js.map": "/the_weather_in_my_city/static/js/main.d41a3836.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.58c6fe04.css",
+    "static/js/main.d41a3836.js"
+  ]
+}
