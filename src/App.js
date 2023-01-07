@@ -5,6 +5,7 @@ import InformationCard from './components/InformationCard';
 import DateCard from './components/DateCard';
 import Map from './components/Map';
 import Pollution from './components/Pollution';
+import Footer from './components/Footer';
 import './App.css';
 import { useState, useEffect } from 'react';
 
@@ -146,6 +147,7 @@ function App() {
         <Pollution airQuality={pollutionData.list[0].main.aqi} components={pollutionData.list[0].components} />
       </div>
 
+      <Footer />
 
     </div>
   );
